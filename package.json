@@ -10,20 +10,24 @@
     "@types/node": "^12.20.15",
     "@types/react": "^17.0.13",
     "@types/react-dom": "^17.0.8",
+    "@types/react-router": "^5.1.15",
+    "@types/react-router-dom": "^5.1.8",
     "ahooks": "^2.10.6",
     "antd": "^4.16.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "typescript": "^4.3.5",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
     "lint": "npm run lint:es",
     "lint:es": "npx eslint src/ --fix",
-    "test": "react-scripts test",
+    "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
   "browserslist": {
@@ -42,6 +46,8 @@
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
-    "eslint-plugin-standard": "^5.0.0"
+    "eslint-plugin-standard": "^5.0.0",
+    "react-app-rewire-alias": "^1.0.3",
+    "react-app-rewired": "^2.1.8"
   }
 }
