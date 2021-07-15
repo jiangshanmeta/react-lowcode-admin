@@ -4,39 +4,55 @@ import {
     Switch,
     Route
 } from 'react-router-dom'
+import {
+    Layout
+} from 'antd'
+
+import AppHeader from '@/components/AppHeader'
+import AppFooter from '@/components/AppFooter'
 
 import router, { RouterConfigItem } from '@/router'
 
+import styles from './App.module.scss'
+
 const App:React.FC = () => {
     return (
-        <div className="App">
-            <Router>
-                <Switch>
-                    {router.map(({
-                        path,
-                        component: Component,
-                        meta
-                    }) => {
-                        const props:{meta:RouterConfigItem['meta']} = {
-                            meta: undefined
-                        }
-                        if (meta) {
-                            props.meta = meta
-                        }
+        <Router>
+            <Layout className={styles.AppPage}>
+                <AppHeader/>
+                <Layout>
+                    <Layout.Sider>Sider</Layout.Sider>
+                    <Layout.Content className={styles.AppMain}>
+                        <Switch>
+                            {router.map(({
+                                path,
+                                component: Component,
+                                meta
+                            }) => {
+                                const props:{meta:RouterConfigItem['meta']} = {
+                                    meta: undefined
+                                }
+                                if (meta) {
+                                    props.meta = meta
+                                }
 
-                        return (
-                            <Route
-                                key={path}
-                                exact
-                                path={path}
-                            >
-                                <Component {...props}/>
-                            </Route>
-                        )
-                    })}
-                </Switch>
-            </Router>
-        </div>
+                                return (
+                                    <Route
+                                        key={path}
+                                        exact
+                                        path={path}
+                                    >
+                                        <Component {...props}/>
+                                    </Route>
+                                )
+                            })}
+                        </Switch>
+                    </Layout.Content>
+                </Layout>
+                <AppFooter/>
+            </Layout>
+        </Router>
+
     )
 }
 

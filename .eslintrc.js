@@ -18,6 +18,7 @@ module.exports = {
         indent: [
             'error', 4
         ],
-        'no-console': 'warn'
+        'no-console': 'warn',
+        '@typescript-eslint/no-empty-interface': 'off'
     }
 }
