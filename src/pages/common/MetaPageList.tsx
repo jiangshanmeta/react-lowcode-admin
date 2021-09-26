@@ -2,8 +2,8 @@
 import React from 'react'
 import { useHistory } from 'react-router'
 
-const MetaPageList:React.FC<{
-    meta:{aaa:string}
+const MetaPageList: React.FC<{
+    meta: {aaa: string}
 }> = ({
     meta
 }) => {

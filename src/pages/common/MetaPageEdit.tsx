@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MetaPageEdit:React.FC = () => {
+const MetaPageEdit: React.FC = () => {
     return (
         <div>edit</div>
     )

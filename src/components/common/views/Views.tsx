@@ -5,26 +5,26 @@ import {
     AllOptional
 } from '@/types'
 
-type ViewsProps<T extends Record<string, unknown>, K extends keyof T, U extends {value:T[K]}> = (AllOptional<Omit<U, 'value'>> extends true? {
-    record:T,
-    field:K,
-    component:{
-        Component:React.FC<U>,
-        config?:Omit<U, 'value'>
+type ViewsProps<T extends Record<string, unknown>, K extends keyof T, U extends {value: T[K]}> = (AllOptional<Omit<U, 'value'>> extends true? {
+    record: T
+    field: K
+    component: {
+        Component: React.FC<U>
+        config?: Omit<U, 'value'>
     }
 } : {
-    record:T,
-    field:K,
-    component:{
-        Component:React.FC<U>,
-        config:Omit<U, 'value'>,
-    },
+    record: T
+    field: K
+    component: {
+        Component: React.FC<U>
+        config: Omit<U, 'value'>
+    }
 }) | {
-    record:T,
-    field:K,
+    record: T
+    field: K
 }
 
-export default function Views<T extends AnyObject, K extends keyof T, U extends { value:T[K]}> (props:ViewsProps<T, K, U>):React.ReactNode {
+export default function Views<T extends AnyObject, K extends keyof T, U extends { value: T[K]}> (props: ViewsProps<T, K, U>): React.ReactNode {
     const {
         record,
         field

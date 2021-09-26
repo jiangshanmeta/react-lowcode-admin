@@ -1,14 +1,11 @@
 module.exports = {
     parserOptions: {
+        project: './tsconfig.json',
         parser: 'babel-eslint'
     },
     extends: [
-        'standard',
-        'eslint:recommended',
         'react-app',
-        'plugin:@typescript-eslint/recommended',
-        'plugin:@typescript-eslint/eslint-recommended',
-        'react-app/jest'
+        'standard-with-typescript'
     ],
     plugins: [
         '@typescript-eslint',
@@ -18,7 +15,12 @@ module.exports = {
         indent: [
             'error', 4
         ],
+        '@typescript-eslint/indent': [
+            'error', 4
+        ],
         'no-console': 'warn',
-        '@typescript-eslint/no-empty-interface': 'off'
+        '@typescript-eslint/no-empty-interface': 'off',
+        '@typescript-eslint/consistent-type-assertions': 'off',
+        '@typescript-eslint/strict-boolean-expressions': 'off'
     }
 }

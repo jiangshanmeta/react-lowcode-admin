@@ -15,7 +15,7 @@ import router, { RouterConfigItem } from '@/router'
 
 import styles from './App.module.scss'
 
-const App:React.FC = () => {
+const App: React.FC = () => {
     return (
         <Router>
             <Layout className={styles.AppPage}>
@@ -29,7 +29,7 @@ const App:React.FC = () => {
                                 component: Component,
                                 meta
                             }) => {
-                                const props:{meta:RouterConfigItem['meta']} = {
+                                const props: {meta: RouterConfigItem['meta']} = {
                                     meta: undefined
                                 }
                                 if (meta) {

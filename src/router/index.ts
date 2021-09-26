@@ -1,32 +1,32 @@
 import React, { lazy } from 'react'
 
 export interface RouterConfigItem {
-    path:string;
+    path: string
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    component:React.FC<any>;
+    component: React.FC<any>
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    meta?:any;
+    meta?: any
 }
 
-const router:RouterConfigItem[] = [
+const router: RouterConfigItem[] = [
     {
         path: '/',
-        component: lazy(() => import('@/pages/common/MetaPageList')),
+        component: lazy(async () => await import('@/pages/common/MetaPageList')),
         meta: {
             aaa: '66'
         }
     },
     {
         path: '/create',
-        component: lazy(() => import('@/pages/common/MetaPageCreate'))
+        component: lazy(async () => await import('@/pages/common/MetaPageCreate'))
     },
     {
         path: '/edit',
-        component: lazy(() => import('@/pages/common/MetaPageEdit'))
+        component: lazy(async () => await import('@/pages/common/MetaPageEdit'))
     },
     {
         path: '/info',
-        component: lazy(() => import('@/pages/common/MetaPageInfo')),
+        component: lazy(async () => await import('@/pages/common/MetaPageInfo')),
         meta: {
             aaa: 111
         }

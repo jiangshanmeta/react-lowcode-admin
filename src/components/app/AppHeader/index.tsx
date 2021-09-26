@@ -9,7 +9,7 @@ import classnames from 'classnames'
 
 export interface AppHeaderProps {}
 
-const AppHeader:React.FC<AppHeaderProps> = () => {
+const AppHeader: React.FC<AppHeaderProps> = () => {
     return (
         <Layout.Header className={styles.adminHeader}>
             <Row justify="space-between">

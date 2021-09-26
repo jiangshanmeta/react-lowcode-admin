@@ -5,7 +5,7 @@ import {
 
 export interface AppFooterProps {}
 
-const AppFooter:React.FC<AppFooterProps> = () => {
+const AppFooter: React.FC<AppFooterProps> = () => {
     return (
         <Layout.Footer>
             <div className="text-center">
