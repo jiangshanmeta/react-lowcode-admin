@@ -8,8 +8,8 @@ import {
     Layout
 } from 'antd'
 
-import AppHeader from '@/components/AppHeader'
-import AppFooter from '@/components/AppFooter'
+import AppHeader from '@/components/app/AppHeader'
+import AppFooter from '@/components/app/AppFooter'
 
 import router, { RouterConfigItem } from '@/router'
 
